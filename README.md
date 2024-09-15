@@ -1,6 +1,6 @@
-# MFEDynamic
+# mfedynamic
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.4.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.5.
 This project was created to show the power of Dynamic module Federation in Angular. Here you can see many things:
 - How to create a library and reference it through various projects
 - How to create Micro Frontends (MFE) and host them dinamically inside a shell
