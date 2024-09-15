@@ -1,0 +1,20 @@
+<div class="mfe2-area">    
+    <h1>Remoted component MFE2</h1>
+    <p>This component is on a remote!</p>
+    <p>Click the buttons to broadcast "order" message to subscribers.</p>
+    
+    <div class="field-container">
+        <label>Product</label>
+        <select [(ngModel)]="selectedProduct">
+            <option *ngFor="let item of items" [ngValue]="item">{{item.description}}</option>
+        </select>
+    </div>
+    <div class="field-container">
+        <label>Quantity</label>
+        <input type="number" [(ngModel)]="quantity"/>
+    </div>
+    <div class="field-container">
+        <button (click)="signalFromMFE2()">Broadcast order</button>
+    </div>
+    
+</div>
