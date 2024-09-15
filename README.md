@@ -1,4 +1,4 @@
-# MFEPlayground
+# MFEDynamic
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.4.
 This project was created to show the power of Dynamic module Federation in Angular. Here you can see many things:
