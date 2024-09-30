@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { BaseMessage, BaseWidget } from 'dist/mfe-library';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css'],
+    standalone: true
 })
 export class AppComponent extends BaseWidget {
   title = 'mfe1';

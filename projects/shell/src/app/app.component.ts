@@ -1,16 +1,22 @@
 import { loadRemoteModule } from '@angular-architects/module-federation';
-import { Component, OnDestroy, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild, ViewContainerRef, inject } from '@angular/core';
 import { BaseMessage, BaseWidget } from 'dist/mfe-library';
 import { Subscription } from 'rxjs';
 import { WidgetConfiguration } from './models/widget-configuration.model';
 import { MessageBrokerService } from './services/message-broker.service';
+import { FormsModule } from '@angular/forms';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css'],
+    standalone: true,
+    imports: [FormsModule, RouterOutlet]
 })
 export class AppComponent implements OnInit, OnDestroy {
+  private messageBrokerService = inject(MessageBrokerService);
+
   title = 'shell';
 
   //Component host: can be more than one
@@ -23,7 +29,7 @@ export class AppComponent implements OnInit, OnDestroy {
   //WARNING! All the subscriptions must be unsubscribed, or memory leaks will creep...
   subscriptions: Subscription[] = [];
 
-  constructor(private messageBrokerService: MessageBrokerService) { }
+  constructor() { }
 
   async ngOnInit() {
 
@@ -44,7 +50,7 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   /////////////////////////////////////////////////////////////////////
-  //    //Loading component from remote
+  //    Loading component from remote
   //    It's necessary:
   //    the remote name (mfe1) 
   //    exposedModule name (./Component) 
@@ -79,8 +85,11 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    console.log("Clear subscription to awoid memory leaks!");
+    console.log("Clear subscription to avoid memory leaks!");
     this.subscriptions.forEach(s => s.unsubscribe());
   }
+
+
+  
 
 }

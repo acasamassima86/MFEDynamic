@@ -68,11 +68,11 @@
 					"builder": "ngx-build-plus:dev-server",
 					"configurations": {
 						"production": {
-							"browserTarget": "shell:build:production",
+							"buildTarget": "shell:build:production",
 							"extraWebpackConfig": "projects/shell/webpack.prod.config.js"
 						},
 						"development": {
-							"browserTarget": "shell:build:development"
+							"buildTarget": "shell:build:development"
 						}
 					},
 					"defaultConfiguration": "development",
@@ -85,7 +85,7 @@
 				"extract-i18n": {
 					"builder": "ngx-build-plus:extract-i18n",
 					"options": {
-						"browserTarget": "shell:build",
+						"buildTarget": "shell:build",
 						"extraWebpackConfig": "projects/shell/webpack.config.js"
 					}
 				},
@@ -173,11 +173,11 @@
 					"builder": "ngx-build-plus:dev-server",
 					"configurations": {
 						"production": {
-							"browserTarget": "mfe1:build:production",
+							"buildTarget": "mfe1:build:production",
 							"extraWebpackConfig": "projects/mfe1/webpack.prod.config.js"
 						},
 						"development": {
-							"browserTarget": "mfe1:build:development"
+							"buildTarget": "mfe1:build:development"
 						}
 					},
 					"defaultConfiguration": "development",
@@ -190,7 +190,7 @@
 				"extract-i18n": {
 					"builder": "ngx-build-plus:extract-i18n",
 					"options": {
-						"browserTarget": "mfe1:build",
+						"buildTarget": "mfe1:build",
 						"extraWebpackConfig": "projects/mfe1/webpack.config.js"
 					}
 				},
@@ -277,11 +277,11 @@
 					"builder": "ngx-build-plus:dev-server",
 					"configurations": {
 						"production": {
-							"browserTarget": "mfe2:build:production",
+							"buildTarget": "mfe2:build:production",
 							"extraWebpackConfig": "projects/mfe2/webpack.prod.config.js"
 						},
 						"development": {
-							"browserTarget": "mfe2:build:development"
+							"buildTarget": "mfe2:build:development"
 						}
 					},
 					"defaultConfiguration": "development",
@@ -294,7 +294,7 @@
 				"extract-i18n": {
 					"builder": "ngx-build-plus:extract-i18n",
 					"options": {
-						"browserTarget": "mfe2:build",
+						"buildTarget": "mfe2:build",
 						"extraWebpackConfig": "projects/mfe2/webpack.config.js"
 					}
 				},

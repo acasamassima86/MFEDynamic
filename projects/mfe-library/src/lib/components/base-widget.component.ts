@@ -4,6 +4,7 @@ import { BaseMessage } from '../models/base-message.model';
 @Component({
     selector: 'mfe-base-widget',
     template: `<div>base widget works!!</div>`,
+    standalone: true,
 })
 export class BaseWidget {
     

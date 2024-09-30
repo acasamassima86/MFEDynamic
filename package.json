@@ -9,7 +9,7 @@
     "build:shell": "ng build shell --prod",
     "build:mfe1": "ng build mfe1 --prod",
     "build:mfe2": "ng build mfe2 --prod",
-    "build:mfe:library": "ng build customer -c=production",
+    "build:mfe:library": "ng build mfe-library -c=production",
     "start": "concurrently \"npm run start:shell\" \"npm run start:mfe1\" \"npm run start:mfe2\"",
     "build": "npm run build:shell && npm run build:mfe1 && npm run build:mfe2",
     "watch": "ng build --watch --configuration development",
